@@ -727,7 +727,7 @@ billboard %>%
     cols = c('wk1', 'wk2'),
     names_to = 'week',
     values_to = 'rank',
-    values_drop_na = T
+    values_drop_na = TRUE
     )
 ```
 
@@ -739,7 +739,7 @@ billboard %>%
     cols= starts_with('wk'),
     names_to = 'week',
     values_to = 'rank',
-    values_drop_na = T) %>%
+    values_drop_na = TRUE) %>%
   mutate(
     week_numb = as.numeric(str_replace(week, 'wk',''))
     ) %>%
